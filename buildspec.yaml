@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      # install node and npm
+      - apt update
+      - apt install -y nodejs 
+  build:
+    commands:
+      # start and build
+      #- echo Testing..
+      #- npm run test
+      - echo Building...
+      - npm run build
+      - echo Starting Server on Port 3000
+      - (npm run start&)
+
+artifacts: 
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: build
