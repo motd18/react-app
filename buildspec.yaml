@@ -8,6 +8,8 @@ phases:
       - apt install -y nodejs 
   build:
     commands:
+      - echo Build file
+      - npm run build
       - echo Starting Server on Port 3000
       - (npm run start&)
 
