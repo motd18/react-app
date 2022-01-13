@@ -6,6 +6,12 @@ phases:
       # install node and npm
       - apt update
       - apt install -y nodejs 
+  pre_build:
+    commands:
+      # install dependencies
+      - echo Installing Dependies
+      - npm i
+      - npm audit fix
   build:
     commands:
       - echo Build file
