@@ -16,8 +16,6 @@ phases:
     commands:
       - echo Build file
       - npm run build
-      - echo Starting Server on Port 3000
-      - (npm run start&)
 
 artifacts: 
   files:
